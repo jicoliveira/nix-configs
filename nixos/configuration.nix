@@ -3,6 +3,7 @@
 
   imports = [
     ./hardware-configuration.nix
+
   ];
 
   nix = {
@@ -28,6 +29,13 @@
   services.xserver.desktopManager.gnome.enable = true; 
 
   networking.networkmanager.enable = true; 
+
+  hardware.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+  };
 
   time.timeZone = "America/Sao_Paulo";
 
