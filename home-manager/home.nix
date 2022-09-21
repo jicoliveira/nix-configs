@@ -1,6 +1,7 @@
 { inputs, lib, config, pkgs, ... }: {
   imports = [
       inputs.hyprland.homeManagerModules.default
+      ./sway.nix  
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -19,11 +20,9 @@
     insomnia
     dbeaver
   ];
-
-  wayland.windowManager.hyprland.enable = true;
+  services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = false;
-  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
   programs.neovim.enable = true;
   programs.home-manager.enable = true;
   programs.git.enable = true;
