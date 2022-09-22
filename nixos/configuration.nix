@@ -34,12 +34,22 @@
     wlr.enable = true;
   };
 
-  services.dbus.enable = true;
+  services = {
+    dbus.enable = true;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      pulse.enable = true;
+    };
+  };
 
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    pulse.enable = true;
+  hardware = {
+    opengl = {
+      enable = true;
+      extraPackages = with pkgs; [ amdvlk ];
+      driSupport = true;
+      driSupport32Bit = true;
+    };
   };
   
   users.users = {

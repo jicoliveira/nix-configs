@@ -2,6 +2,7 @@
   imports = [
       # inputs.hyprland.homeManagerModules.default
       ./sway.nix  
+      ./fonts.nix  
   ];
 
   nixpkgs.config.allowUnfree = true;
