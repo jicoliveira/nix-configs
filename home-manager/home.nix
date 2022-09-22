@@ -1,6 +1,5 @@
 { inputs, lib, config, pkgs, ... }: {
   imports = [
-      # inputs.hyprland.homeManagerModules.default
       ./sway.nix  
       ./fonts.nix  
   ];
@@ -15,11 +14,8 @@
 
   home.packages = with pkgs; [ 
     bottom
-    # vlc
-    # libreoffice
-    # vscode
-    # insomnia
-    # dbeaver
+    firefox
+    vscodium
   ];
 
   programs = {

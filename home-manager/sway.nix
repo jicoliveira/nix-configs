@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, lib, config, ... }:
 {
   programs.alacritty = {
     enable = true;
@@ -15,7 +15,7 @@
     wrapperFeatures.gtk = true;
     config = {
       terminal = "${config.programs.alacritty.package}/bin/alacritty";
-      bars = [];
+      bars = [ {command = "waybar";} ];
       fonts = {
         names = [ "Fira Sans" ];
         size = 12.0;
@@ -29,8 +29,14 @@
         };
       };
       gaps = {
-        inner = 15;
+        inner = 5;
       };
-    };
+	
+			keybindings = lib.mkOptionDefault {
+				# brightness
+				"XF86MonBrightnessUp" = "exec ${pkgs.light}/bin/light -A 10";
+				"XF86MonBrightnessDown" = "exec ${pkgs.light}/bin/light -U 10";
+			};
+		};
   };
 }
