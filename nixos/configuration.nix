@@ -29,6 +29,13 @@
     networkmanager.enable = true; 
   };
 
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+  };
+
+  services.dbus.enable = true;
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
