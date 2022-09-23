@@ -34,8 +34,8 @@
 	
 			keybindings = lib.mkOptionDefault {
 				# brightness
-				"XF86MonBrightnessUp" = "exec ${pkgs.light}/bin/light -A 10";
-				"XF86MonBrightnessDown" = "exec ${pkgs.light}/bin/light -U 10";
+				"XF86MonBrightnessUp" = "exec ${pkgs.brightnessctl}/bin/brightnessctl s +10%";
+				"XF86MonBrightnessDown" = "exec ${pkgs.brightnessctl}/bin/brightnessctl s 10%-";
 			};
 		};
   };
