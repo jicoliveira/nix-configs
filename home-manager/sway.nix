@@ -15,11 +15,13 @@
     wrapperFeatures.gtk = true;
     config = {
       terminal = "${config.programs.alacritty.package}/bin/alacritty";
-      bars = [ {command = "waybar";} ];
-      fonts = {
-        names = [ "Fira Sans" ];
-        size = 12.0;
-      };
+        bars = [{
+          command = "waybar";
+        }];      
+        fonts = {
+          names = [ "Fira Sans" ];
+          size = 12.0;
+        };
       input = {
         "*" = {
           xkb_layout = "br";
@@ -41,6 +43,9 @@
         "XF86AudioRaiseVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +5%";
         "XF86AudioLowerVolume" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -5%";
         "XF86AudioMute" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle";
+
+        #screenshot
+        "Print" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot --notify copy output";
 			};
 		};
   };
