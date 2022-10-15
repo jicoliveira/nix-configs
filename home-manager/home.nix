@@ -16,6 +16,7 @@
     bottom
     firefox
     vscodium
+    pavucontrol
   ];
 
   programs = {
