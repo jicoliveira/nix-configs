@@ -28,7 +28,7 @@
           }];      
           fonts = {
             names = [ "Fira Sans" ];
-            size = 12.0;
+            size = 11.0;
           };
         input = {
           "*" = {
