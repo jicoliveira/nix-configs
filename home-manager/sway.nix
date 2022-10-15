@@ -28,7 +28,7 @@
           }];      
           fonts = {
             names = [ "Fira Sans" ];
-            size = 11.0;
+            size = 12.0;
           };
         input = {
           "*" = {
@@ -53,9 +53,7 @@
           "XF86AudioMute" = "exec ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle";
 
           # screenshot
-          "${modifier}+p" = "exec grimshot copy area";
-          "${modifier}+Shift+p" = "exec grimshot copy active";
-          "${modifier}+Ctrl+p" = "exec grimshot copy window";
+          "Print" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot --notify copy output";
         };
       };
   };
