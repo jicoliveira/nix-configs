@@ -12,8 +12,9 @@
       };
       battery = {
           format = "{capacity}% {icon}";
-          format-icons = [ "" "" "" "" "" "" "" "" "" "" ];
-          format-charging = " {capacity}%";
+          format-icons = [ "" "" "" "" "" ];
+          format-charging = "{capacity}% ";
+          format-plugged = "{capacity}% ";
       };
       clock = {
           format-alt = "{:%a, %d. %b  %H:%M}";
