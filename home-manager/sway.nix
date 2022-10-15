@@ -1,5 +1,8 @@
 { pkgs, lib, config, ... }:
 {
+  imports = [
+    ./waybar.nix
+  ];
   programs.alacritty = {
     enable = true;
     settings = {
