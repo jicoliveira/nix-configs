@@ -31,7 +31,7 @@
         };
       };
       gaps = {
-        inner = 5;
+        inner = 10;
       };
 	
 			keybindings = lib.mkOptionDefault {
