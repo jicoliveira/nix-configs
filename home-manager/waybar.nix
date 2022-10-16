@@ -46,7 +46,6 @@
         };
 
         temperature = {
-            thermal-zone = 2;
             critical-threshold = 80;
             format = "{temperatureC}°C {icon}";
             format-icons = ["" "" ""];
