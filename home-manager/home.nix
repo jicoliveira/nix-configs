@@ -19,6 +19,7 @@
     pavucontrol
     evince
     gnome.nautilus
+    gnome.adwaita-icon-theme
   ];
 
   programs = {
