@@ -18,7 +18,7 @@
     vscodium
     pavucontrol
     evince
-    nautilus
+    gnome.nautilus
   ];
 
   programs = {
