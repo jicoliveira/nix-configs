@@ -17,6 +17,8 @@
     firefox
     vscodium
     pavucontrol
+    evince
+    nautilus
   ];
 
   programs = {
