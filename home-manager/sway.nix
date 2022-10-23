@@ -17,9 +17,12 @@
     enable = true;
     wrapperFeatures.gtk = true;
     config = {
-      modifier = "Mod4";
-      menu = "${pkgs.wofi}/bin/wofi --show drun";
-      terminal = "${config.programs.alacritty.package}/bin/alacritty";
+        modifier = "Mod4";
+        menu = "${pkgs.wofi}/bin/wofi --show drun";
+        terminal = "${config.programs.alacritty.package}/bin/alacritty";
+        startup = [
+          {command = "${pkgs.gammastep} -t 6000:4000 -l -22:-30"}
+        ];
         bars = [{
           command = "waybar";
         }];      
@@ -37,7 +40,7 @@
         };
       };
       gaps = {
-        inner = 10;
+        inner = 5;
       };
 
       keybindings = lib.mkOptionDefault {
