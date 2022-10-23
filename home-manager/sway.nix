@@ -21,7 +21,7 @@
         menu = "${pkgs.wofi}/bin/wofi --show drun";
         terminal = "${config.programs.alacritty.package}/bin/alacritty";
         startup = [
-          {command = "${pkgs.gammastep} -t 6000:4000 -l -22:-30"};
+          {command = "${pkgs.gammastep} -t 6000:4000 -l -22:-30";}
         ];
         bars = [{
           command = "waybar";
