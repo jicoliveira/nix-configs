@@ -2,7 +2,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [ 
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
@@ -14,17 +15,17 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/bae15314-3692-48dd-b2ce-1025dcb1c39e";
+    { device = "/dev/disk/by-uuid/c416dbcd-a152-4502-920c-ebb0dbabbccf";
       fsType = "btrfs";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/CA2A-2EB3";
+    { device = "/dev/disk/by-uuid/82CE-DF0D";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/ba0047ca-5ad6-4965-8607-e737b8730e74"; }
+    [ { device = "/dev/disk/by-uuid/81fdf5dd-1e3c-4baa-98f0-1666754146ec"; }
     ];
 
 
