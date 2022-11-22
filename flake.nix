@@ -12,7 +12,7 @@
 
   outputs = { nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations = {
-      carnotaurus = nixpkgs.lib.nixosSystem {
+      nixos = nixpkgs.lib.nixosSystem {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         specialArgs = { inherit inputs; };
         modules = [ 
@@ -22,7 +22,7 @@
     };
 
     homeConfigurations = {
-      "julio@carnotaurus" = home-manager.lib.homeManagerConfiguration {
+      "julio@nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = { inherit inputs; }; 
         modules = [ 
