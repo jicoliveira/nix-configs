@@ -20,6 +20,7 @@
     evince
     gnome.nautilus
     gnome.adwaita-icon-theme
+    deluge
   ];
 
   programs = {
