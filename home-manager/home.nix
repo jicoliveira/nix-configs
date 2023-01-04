@@ -21,6 +21,7 @@
     gnome.nautilus
     gnome.adwaita-icon-theme
     deluge
+    vlc
   ];
 
   programs = {
