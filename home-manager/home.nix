@@ -22,6 +22,7 @@
     gnome.adwaita-icon-theme
     deluge
     vlc
+    libreoffice
   ];
 
   programs = {
